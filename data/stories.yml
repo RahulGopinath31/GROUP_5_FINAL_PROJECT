@@ -1,0 +1,65 @@
+version: "3.1"
+
+stories:
+
+- story: user_exists_dominopt_algreacyes_crsyes_ctyes_consultyes_appyes
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mobile_no
+  - action: utter_covid_vaccination
+  - intent: Vaccination
+  - action: utter_diseases_on_medication
+  - intent: diseases_on_medication
+  - action: utter_allergic_reactions
+  - intent: affirm
+  - action: utter_allergic_reactions_yes
+  - intent: allergetic_medicine
+  - action: utter_covid_symptoms
+  - intent: affirm
+  - action: utter_covid_releated_symptoms_yes
+  - intent: covid_symptoms
+  - action: utter_duration_of_symptoms
+  - intent: Length_of_symptoms
+  - action: utter_contact_history
+  - intent: contact_history
+  - action: utter_family_same_symptoms
+  - intent: family_member_symptoms
+  - action: utter_public_place
+  - intent: list_of_events
+  - action: Utter_covid_test
+  - intent: covid_test
+  - action: utter_covid_test_yes
+  - intent: mode_of_test
+  - action: utter_test_result
+  - intent: test_result
+  - action: utter_consultation
+  - intent: affirm
+  - action: utter_consultation_yes
+  - intent: ongoing_medication
+  - action: utter_appointment
+  - intent: affirm
+  - action: utter_appointment_yes
+  - intent: goodbye
+  - action: utter_good_bye
+
+
+- story: new_user
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

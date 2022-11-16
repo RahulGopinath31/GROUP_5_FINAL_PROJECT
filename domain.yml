@@ -1,0 +1,218 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - phone
+  - user_info
+  - Vaccination
+  - diseases_on_medication
+  - specific_disease
+  - allergetic_medicine
+  - covid_symptoms
+  - Length_of_symptoms
+  - contact_history
+  - family_member_symptoms
+  - list_of_events
+  - mode_of_test
+  - test_result
+  - ongoing_medication
+
+
+responses:
+  
+  utter_greet:
+  text: "Hi, welcome to the chat. Please enter your mobile Number."
+
+  utter_covid_vaccination:
+  - text: "Have you taken any covid vaccination?"
+    buttons:
+      - title: "First Dose"
+        payload: /inform{{"vaccine_dose":"First_Dose"}}
+      - title: "Second Dose"
+        payload: /inform{{"vaccine_dose":"Second_Dose"}}
+      - title: "Booster Dose"
+        payload: /inform{{"vaccine_dose":"Booster_Dose"}}
+      - title: "Not Vaccinated"
+        payload: /inform{{"vaccine_dose":"Not_Vaccinated"}}
+      
+ utter_user_info:
+  - text: "Please enter your name,age and gender. eg:(Amal-20-Male)"
+ 
+utter_diseases_on_medication:
+- text: "Are you taking any medications for the following diseases?"
+  buttons:
+      - title: "Diabetics"
+        payload: /inform{{"covid_rel_diseases":"Diabetics"}}
+      - title: "Blood Pressure"
+        payload: /inform{{"covid_rel_diseases":"Blood Pressure"}}
+      - title: "Lung disease"
+        payload: /inform{{"covid_rel_diseases":"Lung disease"}}
+      - title: "Cancer"
+        payload: /inform{{"covid_rel_diseases":"Cancer"}}
+      - title: "Kidney disease"
+        payload: /inform{{"covid_rel_diseases":"Kidney disease"}}
+      - title: "Liver disease"
+        payload: /inform{{"covid_rel_diseases":"Liver disease"}}
+      - title: "Dementia"
+        payload: /inform{{"covid_rel_diseases":"Dementia"}}
+      - title: "Heart disease"
+        payload: /inform{{"covid_rel_diseases":"Heart disease"}}
+      - title: "Respiratory Diseases"
+        payload: /inform{{"covid_rel_diseases":"Respiratory Diseases"}}
+      - title: "Others"
+        payload: /inform{{"covid_rel_diseases":"nn"}}
+      
+
+utter_other_disease:
+  - text: "Please specify the disease."
+ 
+utter_allergic_reactions:
+- text: "Do you have allergic reactions to any kind of medicines?"
+  buttons:
+      - title: "Yes"
+        payload: /inform{{"allergic_diseases":"Yes"}}
+      - title: "No"
+        payload: /inform{{"allergic_diseases":"No"}}
+ 
+utter_allergic_reactions_yes:
+- text: "Please specify the medicines you are allergic to."
+
+Utter_covid_symptoms:
+- text: "Do you have any covid related symptoms?"
+buttons:
+      - title: "Yes"
+        payload: /inform{{"covid_symptoms":"Yes"}}
+      - title: "No"
+        payload: /inform{{"covid_symptoms":"No"}}
+ 
+utter_covid_releated_symptoms_yes:
+- text: "Which of the following symptoms do you have?" 
+buttons:
+      - title: "Headache"
+        payload: /inform{{"covid_symptoms":"Headache"}}
+      - title: "Cough"
+        payload: /inform{{"covid_symptoms":"Cough"}}
+      - title: "Fever"
+        payload: /inform{{"covid_symptoms":"Fever"}}
+      - title: "Sore Throat"
+        payload: /inform{{"covid_symptoms":"Sore Throat"}}
+      - title: "Loss of taste and smell"
+        payload: /inform{{"covid_symptoms":"Loss of taste and smell"}}
+      - title: "Body pain"
+        payload: /inform{{"covid_symptoms":"Body pain"}}
+      - title: "Chest pain"
+        payload: /inform{{"covid_symptoms":"Chest pain"}}
+      - title: "Shortness of breath"
+        payload: /inform{{"covid_symptoms":"Shortness of breath"}}
+      - title: "Vomiting"
+        payload: /inform{{"covid_symptoms":"Vomiting"}}
+      - title: "Tiredness"
+        payload: /inform{{"covid_symptoms":"Tiredness"}}
+      - title: "Cold"
+        payload: /inform{{"covid_symptoms":"Cold"}}
+      - title: "More than one symptom"
+        payload: /inform{{"covid_symptoms":"More"}}
+
+utter_duration_of_symptoms:
+- text: "How long do you have these symptoms?"
+  buttons:
+    - title: "1-2 days"
+      payload: /inform{{"days_showing_symptoms":"1-2 days"}}
+    - title: "2-4 days"
+      payload: /inform{{"days_showing_symptoms":"2-4 days"}}
+    - title: "4-7 days"
+      payload: /inform{{"days_showing_symptoms":"4-7 days"}}
+    - title: "More than a week"
+      payload: /inform{{"days_showing_symptoms":"more than a week"}}
+
+utter_contact_history:
+- text: "Do you have any primary/secondary contact with a COVID patient?"
+  buttons:
+    - title: "Primary"
+      payload: /inform{{"contact_history":"primary"}}
+    - title: "Secondary"
+      payload: /inform{{"contact_history":"secondary"}}
+    - title: "None"
+      payload: /inform{{"contact_history":"none"}}
+
+utter_family_same_symptoms:
+- text: "Do you have any person in your family with the same symptoms?"
+  buttons:
+      - title: "Yes"
+        payload: /inform{{"family_member":"Yes"}}
+      - title: "No"
+        payload: /inform{{"family_member":"No"}}
+
+utter_public_place:
+- text: "Did you visit any of the following public places/events?"
+buttons:
+      - title: "Marriage function"
+        payload: /inform{{"public_place_visit":"Marriage function"}}
+      - title: "Railway station"
+        payload: /inform{{"public_place_visit":"Railway station"}}
+      - title: "Bus station"
+        payload: /inform{{"public_place_visit":"Bus station"}}
+      - title: "Airport"
+        payload: /inform{{"public_place_visit":"Airport"}}
+      - title: "Religious centers"
+        payload: /inform{{"public_place_visit":"Religious centers"}}
+      - title: "Metro stations"
+        payload: /inform{{"public_place_visit":"Metro stations"}}
+      - title: "Others"
+        payload: /inform{{"public_place_visit":"Others"}}
+      - title: "None"
+        payload: /inform{{"public_place_visit":"None"}}
+
+Utter_covid_test:
+- text: "Have you done any covid test recently?"
+buttons:
+      - title: "Yes"
+        payload: /inform{{"covid_test":"Yes"}}
+      - title: "No"
+        payload: /inform{{"covid_test":"No"}}
+
+utter_covid_test_yes: 
+- text: "Mode of test?"
+buttons:
+      - title: "Self Test"
+        payload: /inform{{"test_mode":"self"}}
+      - title: "Laboratory Test"
+        payload: /inform{{"test_mode":"lab"}}
+
+utter_test_result:
+- text: "What is the test result?"
+buttons:
+      - title: "Positive"
+        payload: /inform{{"test_result":"Positive"}}
+      - title: "Negative"
+        payload: /inform{{"test_result":"Negative"}}
+
+utter_consultation:
+- text: "Have you consulted any doctors in the previous days?"
+buttons:
+      - title: "Yes"
+        payload: /inform{{"doctor_consulted":"Yes"}}
+      - title: "No"
+        payload: /inform{{"doctor_consulted":"No"}}
+
+utter_consultation_yes:
+- text: "Which are the medicines you are currently taking?"
+ 
+utter_appointment:
+- text: "Prediction: Your chance of having COVID-19 is xx(covid_prediction)%. Would you like to book an appointment at a hospital?"
+
+utter_appointment_yes:
+-text: "Please visit "https://xyz.com to book an appointment."
+
+utter_appointment_no:
+-text: "Thankyou for using chatbot.STAY HOME STAY SAFE."
+
+utter_good_bye:
+-text: "Wishing you a great day.STAY HOME STAY SAFE. Thankyou."
+
+session_config:
+  session_expiration_time: 30
+  carry_over_slots_to_new_session: true

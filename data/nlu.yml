@@ -1,0 +1,206 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello there
+    - hi
+    - hello
+    - good morning
+    - good evening
+    - hey there
+    - good morning
+    - good evening
+    - good afternoon
+
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - of course
+    - that sounds good
+    - correct
+    - great
+    - OK
+    - okay
+    - thank you
+    - thanks
+    - yes, thanks
+    - thanks a lot
+    - thank you very much
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+ 
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - don't know
+
+- intent: mobile_no
+  examples: |
+    - 9564822445
+    - 8456231245
+    - 7589698642
+    - 6547897847
+
+- intent: user_info
+  examples: |
+    - asha-25-female
+    - ben-45-male
+    - mary-31-transgender
+    - neethu, 46, -
+    - xyz 32 na
+
+- intent: Vaccination
+    examples: 
+    - First Dose
+    - Second Dose
+    - Booster
+    - Not vaccinated
+ 
+- intent: diseases_on_medication
+    examples: 
+    - Diabetics
+    - Respiratory disease
+    - BP
+    - Lung disease
+    - Cancer
+    - Kidney disease
+    - Liver disease
+    - Dementia
+    - Heart disease
+    - Other
+
+- intent: specific_disease
+  examples: 
+    - Tuberculosis
+    - TB
+    - Flu
+    - Hepatitis
+    - Alzheimer's
+    - Chickenpox
+    - Diarrhea
+    - Heart disease
+    - Other
+
+- intent: allergetic_medicine 
+  examples:
+    - Penicillin
+    - amoxicillin
+    - ampicillin
+    - tetracycline
+    - ibuprofen
+    - aspirin
+    - naproxen
+    - sulfa drugs
+    - chemotherapy drugs
+    - cetuximab 
+    - erbitux 
+    - rituximab
+    - HIV drugs 
+    - abacavir 
+    - nevirapine
+    - Insulin
+    - antiseizure drugs
+    - carbamazepine
+    - tegretol 
+    - lamotrigine 
+    - lamictal
+    - phenytoin
+    - Muscle relaxers
+    - atracurium
+    - succinylcholine
+    - vecuronium
+
+- intent: covid_symptoms
+  examples:
+    - Headache  
+    - Cough
+    - Fever
+    - Cold
+    - Sore Throat 
+    - Loss of taste and smell
+    - Body pain
+    - Chest pain
+    - Shortness of breath
+    - Vomiting
+    - Tiredness
+
+- intent: Length_of_symptoms
+  examples:
+    - 1-2 days
+    - 2-4 days
+    - 4-7 days
+    - more than 1 week
+
+- intent: contact_history
+  examples:
+    - primary
+    - secondary
+    - none of these
+
+- intent: family_member_symptoms 
+  examples:
+    - Yes
+    - No
+
+- intent: list_of_events
+  examples:
+    - Meetings
+    - marriage function
+    - Birthday party
+    - Receptions
+    - Farewell Party
+    - Railway station
+    - Bus station
+    - Airport
+    - Religious centers
+    - Metro stations
+    - Others
+    - None
+intent: covid_test
+examples:
+  - Yes
+  - No
+
+intent: mode_of_test
+examples:
+  - self
+  - Laboratory
+
+intent: test_result
+examples:
+  - positive
+  - Negative
+
+intent: ongoing_medication
+examples:
+  - Azithromizine
+  - dolo
+  - vitamins
+  - probiotics
+  - ibuprofen
+  - aspirin
+  - antibiotics
+  - paracetamol
